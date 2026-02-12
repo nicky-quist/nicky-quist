@@ -1,16 +1,22 @@
-## Hi there 👋
+# Nicholas Quist — SOC / Blue Team
 
-<!--
-**nicky-quist/nicky-quist** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build practical detections, investigate alerts end-to-end, and document my thinking like a real SOC.
 
-Here are some ideas to get you started:
+## What I work on
+- Splunk SPL detections + tuning
+- Network investigations (PCAP → IOCs → SIEM pivots)
+- Suricata rules + validation
+- (Optional) OT/ICS protocol monitoring
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Pinned Projects (start here)
+- 🔎 splunk-detections — SPL detections with MITRE mapping + tuning notes
+- 🧪 pcap-investigations — case studies with timelines + IOCs
+- 🛡️ suricata-rules-lab — rules + test PCAPs + false positive notes
+- 📋 soc-triage-playbooks — alert triage checklists and response steps
+- 🏭 ics-monitoring-notes — OT protocols + detection ideas (later)
+
+## Current Focus
+Building a detection pack + investigation writeups that mirror real SOC work.
+
+## Skills
+Splunk, Windows Event Logs, Wireshark, Suricata, Nmap/Nessus basics, MITRE ATT&CK mapping
