@@ -9,7 +9,7 @@ I build practical detections, investigate alerts end-to-end, and document my wor
 - **Network investigations** (PCAP → IOCs → SIEM pivots)
 - **Suricata rules + validation** (test PCAPs + false-positive notes)
 - **Windows Event Logs / Sysmon** (process, auth, persistence tracking)
-- (Optional) **OT/ICS monitoring** (protocol behavior + detection ideas)
+- **OT/ICS monitoring** (protocol behavior + detection ideas)
 
 ---
 
@@ -23,12 +23,12 @@ I build practical detections, investigate alerts end-to-end, and document my wor
 ---
 
 ## Pinned Projects (start here)
-- 🔎 **splunk-detections** — SPL detections with MITRE mapping + tuning notes  
-- 🧪 **pcap-investigations** — case studies with timelines + IOCs + detection ideas  
-- 🛡️ **suricata-rules-lab** — Suricata rules + test PCAP validation + FP tuning  
-- 📋 **soc-triage-playbooks** — alert triage checklists + escalation thresholds  
-- 🪟 **windows-event-labs** — Windows/Sysmon telemetry notes + hunting pivots  
-- 🛰️ **nmap-log-analysis** — recon detection writeup using Nmap/Wireshark/Suricata/Splunk  
+- **splunk-detections** — SPL detections with MITRE mapping + tuning notes  
+- **pcap-investigations** — case studies with timelines + IOCs + detection ideas  
+- **suricata-rules-lab** — Suricata rules + test PCAP validation + FP tuning  
+- **soc-triage-playbooks** — alert triage checklists + escalation thresholds  
+- **windows-event-labs** — Windows/Sysmon telemetry notes + hunting pivots  
+- **nmap-log-analysis** — recon detection writeup using Nmap/Wireshark/Suricata/Splunk  
 
 ---
 
