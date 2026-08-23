@@ -2,11 +2,11 @@
 
 **Machine learning applied to security problems** — and evaluating the models other people build.
 
-M.S. Data Science & Artificial Intelligence at UNC Wilmington (starting Fall 2026), following a B.S. in Cybersecurity there. Currently an AI Model Evaluation Contractor at **Handshake AI**, grading frontier model outputs for technical accuracy, reasoning quality, and hallucination risk.
+M.S. Data Science & Artificial Intelligence at UNC Wilmington (Fall 2026 – December 2027), following a B.S. in Cybersecurity there. Currently an AI Model Evaluation Contractor at **Handshake AI**, grading frontier model outputs for technical accuracy, reasoning quality, and hallucination risk.
 
 I came into ML through security, and the overlap is the part I care about: getting messy real-world security data into a shape a model can actually learn from, and being honest about what the results do and don't prove.
 
-[Portfolio](https://nicky-quist.github.io) · [LinkedIn](https://www.linkedin.com/in/nicholasquist/) · [LetsDefend](https://app.letsdefend.io/user/quist) · [Hack The Box](https://profile.hackthebox.com/profile/019c498b-e549-7061-b8cd-6586b4980ed0)
+[LinkedIn](https://www.linkedin.com/in/nicholasquist/) · [LetsDefend](https://app.letsdefend.io/user/quist) · [Hack The Box](https://profile.hackthebox.com/profile/019c498b-e549-7061-b8cd-6586b4980ed0)
 
 ---
 
