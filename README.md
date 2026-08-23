@@ -2,7 +2,7 @@
 
 **Machine learning applied to security problems** — and evaluating the models other people build.
 
-M.S. Data Science & Artificial Intelligence at UNC Wilmington (Fall 2026 – December 2027), following a B.S. in Cybersecurity there. Currently an AI Model Evaluation Contractor at **Handshake AI**, grading frontier model outputs for technical accuracy, reasoning quality, and hallucination risk.
+M.S. Data Science & Artificial Intelligence at UNC Wilmington, following a B.S. in Cybersecurity there.
 
 I came into ML through security, and the overlap is the part I care about: getting messy real-world security data into a shape a model can actually learn from, and being honest about what the results do and don't prove.
 
