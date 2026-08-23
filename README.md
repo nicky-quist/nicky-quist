@@ -1,11 +1,12 @@
 # Nicholas Quist
 
-SOC / Blue Team — Splunk SPL detections, PCAP/Suricata investigations, IR triage.
-Student at UNC Wilmington.
+**Machine learning applied to security problems** — and evaluating the models other people build.
 
-I build practical detections, investigate alerts end-to-end, and document the work like a real SOC would: **triage → pivot → timeline → IOCs → detection → tuning.**
+M.S. Data Science & Artificial Intelligence at UNC Wilmington (starting Fall 2026), following a B.S. in Cybersecurity there. Currently an AI Model Evaluation Contractor at **Handshake AI**, grading frontier model outputs for technical accuracy, reasoning quality, and hallucination risk.
 
-[LinkedIn](https://www.linkedin.com/in/nicholasquist/) · [LetsDefend](https://app.letsdefend.io/user/quist) · [Hack The Box](https://profile.hackthebox.com/profile/019c498b-e549-7061-b8cd-6586b4980ed0)
+I came into ML through security, and the overlap is the part I care about: getting messy real-world security data into a shape a model can actually learn from, and being honest about what the results do and don't prove.
+
+[Portfolio](https://nicky-quist.github.io) · [LinkedIn](https://www.linkedin.com/in/nicholasquist/) · [LetsDefend](https://app.letsdefend.io/user/quist) · [Hack The Box](https://profile.hackthebox.com/profile/019c498b-e549-7061-b8cd-6586b4980ed0)
 
 ---
 
@@ -13,27 +14,46 @@ I build practical detections, investigate alerts end-to-end, and document the wo
 
 | Project | What it is |
 |---|---|
-| [**soc-triage-tool**](https://github.com/nicky-quist/soc-triage-tool) | React app that triages a pasted alert (syslog, Windows Event, Suricata, Zeek, CEF) — detects the log format, scores severity, and maps it to MITRE ATT&CK. [Live demo](https://nicky-quist.github.io/soc-triage-tool/) |
-| [**splunk-detections**](https://github.com/nicky-quist/splunk-detections) | SPL detections with data requirements, investigation pivots, MITRE mapping, and false-positive tuning notes for each one |
-| [**llm-cybersecurity-benchmark**](https://github.com/nicky-quist/llm-cybersecurity-benchmark) | Head-to-head benchmark of LLMs on SOC analysis tasks — detection engineering, threat reasoning, IR scenarios. [Live dashboard](https://nicky-quist.github.io/llm-cybersecurity-benchmark/dashboard/index.html) |
-| [**attack-path-modeler**](https://github.com/nicky-quist/attack-path-modeler) | Parses Nessus scan data into an attack graph, ranks lateral-movement paths by exploit difficulty, and visualizes it with matplotlib + an interactive D3 dashboard |
-| [**rmf-security-assessment-sample**](https://github.com/nicky-quist/rmf-security-assessment-sample) | A full NIST RMF assessment lifecycle worked end-to-end for a fictional case-management system — categorization through ATO recommendation |
-| [**windows-event-labs**](https://github.com/nicky-quist/windows-event-labs) | Hands-on labs on high-signal Windows Security + Sysmon event IDs, with process/network correlation writeups |
-| [**pcap-investigations**](https://github.com/nicky-quist/pcap-investigations) | Network investigation case studies — PCAP → IOCs → timeline → SIEM pivots |
-| [**soc-triage-playbooks**](https://github.com/nicky-quist/soc-triage-playbooks) | Alert triage checklists and escalation thresholds by alert type |
-| [**nmap-log-analysis**](https://github.com/nicky-quist/nmap-log-analysis) | Recon-detection writeup correlating Nmap scan activity across Wireshark, Suricata, and Splunk |
+| [**soc-analyst-simulator**](https://github.com/nicky-quist/soc-analyst-simulator) | A working Tier-1 analyst console, built to practise the whole shift rather than quiz you on it: you investigate by typing your own searches against **18 simulated data sources**, pull indicators out of the evidence yourself, and take response actions that carry consequences — **53 of them, 20 of which are mistakes** a CISO, IR lead, and employment lawyer react to. Seven scenarios, 150 events, **52 tests** over the scoring and query engines. [Live demo](https://nicky-quist.github.io/soc-analyst-simulator/) |
+| [**attack-path-modeler**](https://github.com/nicky-quist/attack-path-modeler) | Turns Nessus scan data into a directed attack graph, then trains a **PyTorch Geometric GCN** to predict which lateral-movement edges are high risk. Two GCNConv layers with a skip connection, class-weighted training on an 80/20 edge split. Ranks paths with Dijkstra weighted by exploit ease, finds choke points via betweenness centrality, pulls live CVSS from the NVD API. Interactive D3 dashboard. |
+| [**llm-cybersecurity-benchmark**](https://github.com/nicky-quist/llm-cybersecurity-benchmark) | Head-to-head evaluation of **8 Google and OpenAI models** across **20 security prompts** in 20 categories — threat reasoning, malware analysis, detection engineering, hallucination traps. [Live dashboard](https://nicky-quist.github.io/llm-cybersecurity-benchmark/dashboard/index.html) with per-category filtering and matchup-level results. Submitted to the Codex Creator Challenge 2026. |
+| [**soc-triage-tool**](https://github.com/nicky-quist/soc-triage-tool) | React app with a deterministic, fully offline rule engine — no API calls. Detects log format across 6 types (syslog, Windows Event, Suricata, Zeek, CEF, JSON), maps to MITRE ATT&CK, extracts IOCs, scores severity, recommends a next action. [Live demo](https://nicky-quist.github.io/soc-triage-tool/) |
+| [**splunk-detections**](https://github.com/nicky-quist/splunk-detections) | Three detections validated against live Sysmon/Windows Security telemetry: multi-signal suspicious PowerShell, local-admin creation correlated with first logon, and password spray on Event ID 4625. Each with data requirements, investigation pivots, and false-positive tuning notes. |
+| [**windows-event-labs**](https://github.com/nicky-quist/windows-event-labs) | Labs on the Windows Security and Sysmon event IDs that carry real signal, with process, network, and logon correlation worked end to end. |
+| [**rmf-security-assessment-sample**](https://github.com/nicky-quist/rmf-security-assessment-sample) | A full NIST RMF assessment lifecycle for a fictional case-management system — categorization through ATO recommendation. |
 
 ---
 
-## How I work an alert
-1. **Validate** — is it real, what's the evidence
-2. **Pivot** — across host, user, and network indicators
-3. **Timeline** — reconstruct sequence, capture IOCs
-4. **Contain / escalate** — with justification, not guesswork
-5. **Tune** — turn the investigation into a detection or a fix, so it's faster next time
+## What I'm good at
+
+**Graph ML on messy data** — modeling networks as graphs and learning over their structure. Edge classification, centrality analysis, and feature design that starts from what a scanner actually outputs rather than what would be convenient.
+
+**Evaluating models properly** — benchmarks that separate models instead of flattering them: stratified prompt sets, head-to-head scoring, results you can drill into by category. Also what I do professionally.
+
+**Domain grounding** — detection engineering, log analysis, risk assessment. A summer triaging 10–30 alerts a day and writing Suricata rules from live PCAP is why I know what this data looks like before it's been cleaned up for a paper.
+
+**Stating what a result doesn't prove** — the attack-path GNN hits 100% precision/recall on held-out synthetic edges. The writeup says plainly that it hasn't been validated against real scan data, and that real data will be noisier. Numbers without that caveat aren't worth much.
+
+---
 
 ## Skills
-Splunk SPL · Windows Event Logs & Sysmon · Wireshark · Suricata · Nmap / Nessus · MITRE ATT&CK mapping
+
+**ML & AI** — PyTorch · PyTorch Geometric · Graph Neural Networks · LLM evaluation & benchmark design · feature engineering · Claude API · Jupyter
+
+**Programming & Data** — Python · PowerShell · JavaScript/React · NetworkX · graph algorithms · D3.js · matplotlib · Git
+
+**Detection & SIEM** — Splunk SPL · detection engineering · Suricata · Sigma · Sysmon · Windows Event Logs · threat hunting
+
+**Security Tooling & Frameworks** — Nessus · Nmap · Wireshark · VirusTotal · Microsoft Defender · MITRE ATT&CK · NIST RMF / 800-53 / CSF · Linux (Ubuntu/Kali)
+
+---
+
+## Credentials
+
+CompTIA Security+ (SY0-701), valid through May 2028 · CISA ICS Cybersecurity (ICS-300) · Linear Algebra for Machine Learning & Data Science (DeepLearning.AI)
+
+U.S. Citizen · eligible for security clearance
 
 ## Currently building
-Detection pack: encoded/obfuscated PowerShell, local admin creation + first-logon correlation, service-creation persistence, password-spray indicators, and anomalous outbound DNS.
+
+Training the attack-path GNN on real heterogeneous scan data instead of synthetic graphs, and mapping MITRE ATT&CK techniques per CVE.
