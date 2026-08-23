@@ -53,7 +53,3 @@ I came into ML through security, and the overlap is the part I care about: getti
 CompTIA Security+ (SY0-701), valid through May 2028 · CISA ICS Cybersecurity (ICS-300) · Linear Algebra for Machine Learning & Data Science (DeepLearning.AI)
 
 U.S. Citizen · eligible for security clearance
-
-## Currently building
-
-Training the attack-path GNN on real heterogeneous scan data instead of synthetic graphs, and mapping MITRE ATT&CK techniques per CVE.
